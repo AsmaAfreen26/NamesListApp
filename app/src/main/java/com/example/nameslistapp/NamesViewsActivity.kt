@@ -22,5 +22,8 @@ class NamesViewsActivity : AppCompatActivity() {
             .replace(R.id.fragment_home_container, HomeChildFragment())
             .commit()
 
+//        val navHostFragment2 =
+//            supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+//        val navController2 = navHostFragment2.navController
     }
 }

@@ -34,7 +34,6 @@ class HomeChildFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home_child, container, false)
         val listView: ListView = view.findViewById(R.id.listView)
-
         viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         adapter = ListAdapter(requireContext(), emptyList()) { item ->
@@ -42,6 +41,7 @@ class HomeChildFragment : Fragment() {
     }
 //            findNavController().navigate(R.id.action_homeChildFragment_to_detailFragment)
         listView.adapter = adapter
+
 
         viewModel.listItems.observe(viewLifecycleOwner) { items ->
             adapter.updateData(items)
@@ -63,8 +63,7 @@ class HomeChildFragment : Fragment() {
         val textView: TextView = popupView.findViewById(R.id.textItem)
         val button: Button = popupView.findViewById(R.id.button)
         button.setOnClickListener{
-            findNavController().navigate(R.id.action_homeChildFragment_to_detailFragment)
-
+            findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
             popupWindow.dismiss()
             }
         textView.text = item.name

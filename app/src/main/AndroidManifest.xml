@@ -15,9 +15,6 @@
         android:theme="@style/Theme.NamesListApp"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".NamesViewsActivity"
             android:exported="false" />
         <activity
